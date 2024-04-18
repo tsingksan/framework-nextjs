@@ -1,1 +1,5 @@
-npm run commitlint ${1}
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo \”[Husky] commit-msg\ verify commit message ...”
+npx --no -- commitlint --edit $1
